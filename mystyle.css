@@ -1,0 +1,282 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family:"Poppins", sans-serif;
+  border: auto;
+}
+
+body{
+  margin:0;
+}
+
+
+.contain{
+  width: 100%;
+  background-color: white;
+  margin-bottom: 0px;
+  margin-right: 500px;
+}
+.flg img{
+  height: 30px;
+  margin-top: -44px;
+  margin-right: -50px;
+  float: right;
+  border-radius: 2px;
+}
+
+.logo {
+  height: 60px;
+  width: 60px;
+  margin-top: 60px;
+  margin-bottom: 10px;
+  position:relative;
+}
+
+.logo-text{
+  margin-top: 0px;
+  font-size: 20px;
+  margin-left: 150px;
+  color: burlywood;
+  letter-spacing: 4px;
+ }
+
+  /*Container for links*/
+ nav{
+  display: flex;
+  align-items: center;
+  margin-right: 130px;
+  margin-left: 130px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+ }
+
+  /*header links*/
+ nav ul li{
+  display: inline-block;
+  list-style: none;
+  margin: 10px 30px;
+  margin-top: 50px;
+  margin-right: 40px;
+  margin-left: 20px;
+  text-align: center;
+ }
+
+ nav ul li a{
+  text-decoration: none;
+  font-size: 15px;
+  position: relative;
+  color: black;
+  font-size: 16px;
+  font-weight: 600;
+  opacity: 0.5 ;
+ }
+ nav ul li a:hover{
+  color: blue;
+ }
+ nav ul li a:after{
+  color: orange;
+  content: '';
+  width: 0;
+  height: 3px;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  box-shadow: 1px 1px 2px rgb(0 0 200 / 0.4);
+  border-radius: 2px;
+  transition: 0.5s;
+ }
+ nav ul li a:hover::after{
+  width: 100%;
+  background-color: orange;
+  
+ }
+
+/*this can be used as a button style*/
+.advertButton p{
+  height: 30px;
+  font-family: "FontAwesome", helvetica, sans-serif;
+  box-sizing:border-box;
+  padding-inline: 10px;
+  margin-left: -1200px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  color: white;
+  font-size: 14px;
+  font-weight:200;
+  display: flex;
+  align-items: center;
+}
+
+/* Style the navigation bar */
+.navbar { 
+  height: 42px;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: black;
+  background-size: auto;
+ 
+  display: flex;
+  position: absolute;
+  padding-left: 80px;
+  padding-right: 15px;
+  text-align: center
+  }
+  
+/*******Navbar Login*******/
+.navbar a {
+  position: sticky;
+  height: 40px;
+  letter-spacing: 1px;
+  margin-left: 1000px;
+  padding: 1px 10px;
+  font-size: 11px;
+  font-weight:800;
+  color: orange;
+  text-decoration: none;
+  float: left;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  border-bottom: 1px solid navy;
+  }
+
+  /*********Nav-Bar b*********/
+  .navbar b {
+    height: 40px;
+    color:  grey;
+    text-align: center;
+    margin-right: 15px;
+    padding: 1px 10px;
+    font-size: 12px;
+    font-weight: 100;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    cursor: pointer;
+    float: left;
+    border-bottom: 0.1px solid navy;
+  
+  }
+
+  /* Navbar links on mouse-over */
+    .navbar a:hover {
+      color: aqua;
+      background-color: blue;
+      cursor: pointer;
+      transition-duration: 0.2s;
+      box-shadow: 1px 1px 2px rgb(0 0 200 / 0.4);
+      padding: 2px 10px;
+      box-shadow: 1px 1px 2px rgb(0 0 200 / 0.4);
+      border-radius: 1px;
+    }
+
+    .navbar b:hover {
+      color: aqua;
+      cursor: pointer;
+      transition-duration: 0.2s;
+      box-shadow: 1px 1px 2px rgb(0 0 200 / 0.4);
+      padding: 2px 10px;
+      box-shadow: 1px 1px 2px rgb(0 0 200 / 0.4);
+      border-radius: 1px;
+    }
+
+.elderly{
+margin:0;
+}
+.elderlyimg{
+  position: relative;
+  text-align: center;
+ 
+}
+
+.myDiv {
+  text-align: center;
+  height: 400px;
+  top: 0px;
+  margin:0;
+  background-color: orangered;
+  opacity: 0.7;
+  color: white;
+}
+.myDiv h1{
+  font-weight: bolder;
+}
+
+.text-content {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  transform: translate(-50px,-50px);
+  color: burlywood;
+  opacity: .2; 
+  font-size: 1.5rem;
+}
+.sub-title{
+  text-align: center;
+  font-size: 35px;
+  font-weight: 300px;
+  color: black;
+  letter-spacing: 1px;
+}
+/*********impact********/
+#services{
+  padding: 50px 0;
+  background: whitesmoke;
+}
+.container{
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.impact-list{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
+}
+.impact-list div{
+  background: gainsboro;
+  background-color: ash;
+  padding: 40px;
+  font-size: 10px;
+  font-weight: 300;
+  border-radius: 10px;
+}
+
+.impact-list div i{
+  font-size: 50px;
+  margin-bottom: 30px;
+  transition: background 0.5s, transform 0.5s;
+}
+.impact-list div h2{
+font-size: 30px;
+font-weight: 500;
+margin-bottom: 15px;
+}
+.impact-list div a{
+  text-decoration: none;
+  color: #fff;
+  font-size: 12px;
+  margin-top: 20px;
+  display: inline-block;
+}
+.impact-list div:hover{
+  background: #ff004f;
+  transform: translateY(-10px);
+}
+  
+/* Current/active navbar link */
+.active {
+  background-color: yellow;
+}
+
+/* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
+@media screen and (max-width: 600px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}
