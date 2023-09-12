@@ -25,14 +25,17 @@ body{
   font-family: system-ui, -apple-system, BlinkMacSystemFont,
    'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
     'Helvetica Neue', sans-serif;
-  margin-top: 50px;
-  margin-left: -50px;
-  font-size: 25px;
+  margin-top: 40px;
+  margin-left: -80px;
+  font-size: 50px;
   position: relative;
-  text-align: center;
   border-radius: 2px;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
+  opacity: 0.6;
   transition: background 0.5s, transform 0.5s;
+}
+.formheading i{
+  color: skyblue;
 }
 .navbar img{
   height:30px;
@@ -47,8 +50,14 @@ body{
   width: 45px;
   margin-top: 50px;
   margin-bottom: 10px;
-  margin-left: -60px;
+  margin-left: 60px;
   position:relative;
+}
+
+
+.projection .note{
+  color: red;
+  font: 18px;
 }
 .inputs{
   box-sizing: border-box;
@@ -65,7 +74,7 @@ body{
  nav{
   display: flex;
   align-items: center;
-  margin-right: 100px;
+  margin-right: 200px;
   margin-left: 100px;
   justify-content: space-between;
  }
@@ -74,22 +83,21 @@ body{
  nav ul li{
   display: inline-block;
   list-style: none;
-  margin: 10px 50px;
-  margin-top: 50px;
-  margin-right: 70px;
-  margin-left: 20px;
-  text-align: center;
- }
+  margin: 50px 70px 10px -20px;
 
+  
+ 
+ }
+/**targets the link texts**/
  nav ul li a{
   text-decoration: none;
-  font-size: 15px;
+  font-size: 18px;
   position: relative;
   color: black;
   font-size: 16px;
   font-weight: 600;
   opacity: 0.5 ;
-  padding-left: 0;
+  padding: 3px;
  }
  nav ul li a:hover{
   color: blue;
@@ -108,8 +116,7 @@ body{
  }
  nav ul li a:hover::after{
   width: 100%;
-  background-color: orange;
-  
+  background-color: orange; 
  }
 
 /*this can be used as a button style*/
@@ -135,9 +142,7 @@ body{
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: grey;
-  opacity: 0.5;
-  background-size: auto;
+  background-color: black;
   display: flex;
   position: absolute;
   padding-left: 150px;
@@ -172,8 +177,7 @@ body{
     justify-content: center;
     display: flex;
     cursor: pointer;
-    color: aqua;
-    
+    color: white; 
     padding: 12px 7px;
     border-radius: 3px;
     }
@@ -200,22 +204,73 @@ margin:0;
 }
 .elderly img{
   position: relative;
-  text-align: center;
-}
 
+}
+.textblock{
+  position: absolute;
+  font-size: 30px;
+  top: 400px;
+  left: 20px;
+  background-color: orangered;
+  color: whitesmoke;
+  opacity: 0.8;
+  padding: 40px 30px;
+ 
+}
 .myDiv {
   text-align: center;
-  height: 400px;
+  height: 390px;
   margin-top: -4px;
-  padding-bottom: 10px;
-  background-color: grey;
-  opacity: 0.2;
-  color: white;
+  background-color: orangered;
+  opacity: 0.9;
+  color: whitesmoke;
 }
-.myDiv h1{
-  font-weight: bolder;
+.myDiv p{
+  text-align: center;
+  font-size: 20px;
+  font-weight:200;
+  padding: 20px;
+  font-weight:100;
+  color: whitesmoke;
+  letter-spacing: 1px;
 }
-
+.myDiv h1 {
+  margin-bottom: 20px; 
+  padding: 4.5% 0% 0% 0%;
+  text-align: center;
+  font:400 1.125rem / 1.5rem;
+  font-size: 35px;
+}
+.projection {
+  background-color: white;
+  padding: 30px 100px;
+  color: whitesmoke
+}
+.projection h1 {
+  margin-bottom: 20px; 
+  color: indigo;
+  opacity: 0.5;
+  padding: 2% 0% 0% 0%;
+  text-align: center;
+  font:400 1.125rem / 1.5rem;
+  font-size: 35px; 
+}
+.circle {
+  width: 210px;
+  height: 210px;
+  line-height: 210px;
+  vertical-align: middle; 
+  display: inline-block;
+  border-radius: 50%;
+  font-size: 60px;
+  font-weight: 800;
+  color: #fff;
+  text-align: center;
+  background: orange;
+  margin: 40px 0px 50px 0px;
+  margin-left: 60px;
+ 
+}
 .text-content {
   position: absolute;
   top: 20%;
@@ -232,56 +287,58 @@ margin:0;
   letter-spacing: 1px;
   padding-top: 40px;
 }
-/*********impact********/
-#services{
-  background: #ff004f;
-  margin-top: 0px;
-}
-.container{
-  margin-left: 50px;
-  margin-right: 50px;
-  background-color: #ff004f;
-}
+/*********Our Services********/
 
-.impact-list{
+  .container {
+    background-color: red;
+  }
+
+.service-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 40px;
   margin-top: 50px;
   
 }
-.impact-list div{
+.service {
+ border-radius: 10px;
+ position:relative;
+ overflow: hidden;
+}
+.service img {
+  width: 100%;
+  width: 170%;
+  border-radius: 10px;
+  display: block;
+
+}
+
+.services div {
   padding: 40px;
   font-size: 10px;
   font-weight: 300;
   border-radius: 10px;
 }
-.container img{
-  height: 310px;
-  width: 300px;
-  position: relative;
-  margin-top: -40px;
-  margin-left: -40px;
-}
 
-.impact-list div i{
+.services div i{
   font-size: 50px;
   margin-bottom: 30px;
   transition: background 0.5s, transform 0.5s;
 }
-.impact-list div h2{
+.sub-title h2{
 font-size: 30px;
 font-weight: 500;
 margin-bottom: 15px;
+color: red;
 }
-.impact-list div a{
+.services div a{
   text-decoration: none;
   color: #fff;
   font-size: 12px;
   margin-top: 20px;
   display: inline-block;
 }
-.impact-list div:hover{
+.services-list div:hover{
   background: #ff004f;
   transform: translateY(-10px);
 }
