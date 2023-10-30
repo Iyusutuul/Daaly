@@ -1,106 +1,110 @@
 *{
   margin: 0;
   padding: 0;
-  font-family:"Poppins", sans-serif;
-  border: 0;
+  font-family:"Myriad Pro", sans-serif;
+  box-sizing: border-box;
+}
+
+.slidein {
+  animation-duration: 3s;
+  animation-name: slidein;
+  animation-iteration-count: 3;
+  animation-direction: alternate;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
 }
 
 body{
   margin:0;
 }
-
-#header{
-  margin: 10px 30px;
-}
-
-.contain{
+.rect_1{
   width: 100%;
-  background-color: white;
-  margin-bottom: 0px;
-  margin-right: 20px;
-  margin-left: 20px;
+    position: absolute;
+    top: 0;
+    left: 50;
+    right: 0;
+    height: 100px;
+    border: 0;
+  
 }
+/************sets image width on mixed color navbar****/
+.rect_1 img{
+  width: 100%;
+  height: 200px;
+  
+}
+.rect_2{
+  width: 100%;
+  border: 0;
+    position:absolute;
+    top: 1%;
+    left: 50;
+    right: 0;
+    height: 100px;
+}
+/***targets both the logo and the links on the left***/
+#header{
+  margin: 20px 30px;
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+}
+header *{
+  display: inline-block;
+}
+/**targets just the links***/
+.contain{
+ margin: 15px 0px;
+ margin-top: 20px;
+ margin-left: 100px;
+ 
+}
+/***targets the logo text position***/
 .formheading{
   color: orangered;
+  padding-left: 10px;
+  width: 110px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont,
    'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
     'Helvetica Neue', sans-serif;
-  margin-top: 40px;
-  margin-left: -80px;
-  font-size: 50px;
+  font-size: 25px;
+  font-weight: bold;
   position: relative;
-  border-radius: 2px;
-  letter-spacing: 2px;
-  opacity: 0.6;
-  transition: background 0.5s, transform 0.5s;
+  margin-left: 15px;
+  box-shadow:  
 }
 .formheading i{
-  color: skyblue;
+  color: orangered;
+  font-size: 20px;
+  border-radius: 20px;
 }
-.navbar img{
-  height:30px;
-  margin-top: 5px;
-  margin-right: -30px;
-  margin-left: 20px;
-  float: right;
-}
-/*****Unified logo*****/
-.logo {
-  height: 35px;
-  width: 45px;
-  margin-top: 50px;
-  margin-bottom: 10px;
-  margin-left: 60px;
-  position:relative;
-}
-
-
-.projection .note{
-  color: red;
-  font: 18px;
-}
-.inputs{
-  box-sizing: border-box;
-  border: 1px solid #e5e7eb;
-  border-radius: 10px;
-  padding: 5px 10px;
-  font-size: 0.7rem;
-  margin-right: 50px;
-  margin-left: -10px;
-  color: red;
-}
-
-  /*Container for links*/
- nav{
-  display: flex;
-  align-items: center;
-  margin-right: 200px;
-  margin-left: 100px;
-  justify-content: space-between;
- }
-
-  /*header links*/
+/*targets the descriptive links container behaviour*/
  nav ul li{
   display: inline-block;
   list-style: none;
-  margin: 50px 70px 10px -20px;
-
-  
- 
+  margin: 0px 15px;
+  text-align: center;
  }
-/**targets the link texts**/
+/**targets the link texts itself**/
  nav ul li a{
   text-decoration: none;
-  font-size: 18px;
   position: relative;
-  color: black;
-  font-size: 16px;
-  font-weight: 600;
-  opacity: 0.5 ;
-  padding: 3px;
- }
- nav ul li a:hover{
-  color: blue;
+  color: white;
+  font-size: 15px;
+  font-weight:600;
  }
  nav ul li a:after{
   color: orange;
@@ -112,164 +116,158 @@ body{
   bottom: -10px;
   box-shadow: 1px 1px 2px rgb(0 0 200 / 0.4);
   border-radius: 2px;
-  transition: 0.7s;
+  transition: 0.5s;
+ }
+ /****controls link text on hover color****/
+ nav ul li a:hover{
+  color: white;
  }
  nav ul li a:hover::after{
   width: 100%;
-  background-color: orange; 
+  background-color: orangered; 
  }
 
-/*this can be used as a button style*/
-.advertButton p{
-  height: 20px;
-  font-family: "FontAwesome", helvetica, sans-serif;
-  box-sizing:border-box;
-  padding-inline: 10px;
-  margin-left: -1200px;
-  margin-top: 10px;
-  margin-bottom: 5px;
-  color: grey;
-  font-size: 14px;
-  font-weight:200;
-  display: flex;
-  align-items: center;
-}
-
 /* Style the navigation bar */
-.navbar { 
-  height: 40px;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: black;
+.button { 
+  text-decoration: none;
+  left: 1300px;
+  top: 15px;
+  right: 0px;
   display: flex;
   position: absolute;
-  padding-left: 150px;
-  padding-right: 15px;
-  text-align: center
-  }
-  
-/*******Navbar Login*******/
-.navbar a {
-  text-decoration: none;
-  margin-left: 920px;
-  margin-top: 12px 0;
-  padding: 10px 7px;
-  font-size: 14px;
-  color: white;
-  float: left;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  
-  
-  border-radius: 2px;
+  text-align: center;
   }
 
-  /*********Register Button*********/
-  .navbar b {
+/******style the Join Button******/
+  .button h3{
+    background: orangered;
     text-align: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    font-size: 14px;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 200;
+    cursor: pointer;
+    line-height: 2.0;
+    padding: 0px 10px;
+    font-size: 16px;
+    text-align: center;
+    color: #fff;
+  }
+  /* Join button on mouse-over */
+    .button h3:hover {
+      color: orangered;
+      cursor: pointer;
+      transition-duration: 0.2s;    
+      background-color: #fff;
+    }
+.elderly{
+margin:0;
+padding: o;
+}
+.elderly img{
+  position: relative;
+}
+#vertical_text_1 {
+  line-height: 4.5rem;
+  position: absolute;
+  font-family: inherit;
+  font-size: 65px;
+  font-weight: 100;
+  top: 230px;
+  left: 110px;
+  color: whitesmoke;
+
+  background: rgb(184, 18, 51);
+  padding: 5px;
+  
+}
+.vertical_text_2{
+  position: absolute;
+  line-height: 1.0rem;
+  font-size: 12px;
+  font-weight:400;
+  font-size: 20px;
+  top: 340px;
+  left: 110px;
+  color: whitesmoke;
+  opacity: .9;
+  
+}
+.second_button{
+  font: myriad-pro;
+    background: gainsboro;
+    text-align: left;
+    font-size: 42px;
+    font-weight:lighter;
     align-items: center;
     justify-content: center;
     display: flex;
     cursor: pointer;
     color: white; 
-    padding: 12px 7px;
-    border-radius: 3px;
-    }
-
-  /* Navbar links on mouse-over */
-    .navbar a:hover {
-      color: aqua;
-      cursor: pointer;
-      transition-duration: 0.2s;
-      background-color: orangered;
-      border-radius: 2px;
-    }
-
-    .navbar b:hover {
-      color: whitesmoke;
-      cursor: pointer;
-      transition-duration: 0.2s;    
-      background-color: aqua;
-      border-radius: 2px;
-    }
-
-.elderly{
-margin:0;
+    padding: 14px 8px;
+    border-radius: 2px; 
 }
-.elderly img{
-  position: relative;
-
-}
-.textblock{
-  position: absolute;
-  font-size: 30px;
-  top: 400px;
-  left: 20px;
-  background-color: orangered;
-  color: whitesmoke;
-  opacity: 0.8;
-  padding: 40px 30px;
- 
-}
+/****Our Mission***/
 .myDiv {
   text-align: center;
-  height: 390px;
+  height: 400px;
   margin-top: -4px;
-  background-color: orangered;
-  opacity: 0.9;
-  color: whitesmoke;
+  padding-top: 20px;
+  background-color: rgb(239, 31, 31);
+  letter-spacing: 1px;
+  font-family: inherit;
 }
+.sub-title{
+  text-align: center;
+  font-weight:400;
+ 
+  margin: 30px 0;
+  padding-bottom: 30px;
+  font-size: 30px; 
+  color: white;
+}
+
 .myDiv p{
   text-align: center;
   font-size: 20px;
-  font-weight:200;
-  padding: 20px;
-  font-weight:100;
-  color: whitesmoke;
-  letter-spacing: 1px;
+  font-weight: 100;
+  color: white;
 }
-.myDiv h1 {
-  margin-bottom: 20px; 
-  padding: 4.5% 0% 0% 0%;
-  text-align: center;
-  font:400 1.125rem / 1.5rem;
-  font-size: 35px;
-}
+
 .projection {
   background-color: white;
-  padding: 30px 100px;
-  color: whitesmoke
+  color: whitesmoke;
 }
 .projection h1 {
-  margin-bottom: 20px; 
-  color: indigo;
-  opacity: 0.5;
-  padding: 2% 0% 0% 0%;
+  color: #fa8128;
+  padding: 20px 0;
   text-align: center;
-  font:400 1.125rem / 1.5rem;
+  font: 400 1.125rem / 1.5rem;
+  font-weight:600;
   font-size: 35px; 
 }
 .circle {
-  width: 210px;
-  height: 210px;
-  line-height: 210px;
+  width: 205px;
+  height: 205px;
+  line-height: 205px;
   vertical-align: middle; 
   display: inline-block;
   border-radius: 50%;
-  font-size: 60px;
+  font-size: 65px;
   font-weight: 800;
   color: #fff;
   text-align: center;
   background: orange;
-  margin: 40px 0px 50px 0px;
-  margin-left: 60px;
- 
+  margin: 10px 0px 20px 0;
+  margin-inline-start: 85px;
+  justify-content: space-between;
+  margin-inline-end: 35px;
+}
+.circle-text p{
+  font-size: 14px;
+  color: black
+}
+.circle span {
+  font-size: 60px;
 }
 .text-content {
   position: absolute;
@@ -279,70 +277,80 @@ margin:0;
   color: burlywood; 
   font-size: 1.5rem;
 }
-.sub-title{
-  text-align: center;
-  font-size: 30px;
-  font-weight: 200px;
-  color: whitesmoke;
-  letter-spacing: 1px;
-  padding-top: 40px;
-}
-/*********Our Services********/
-
-  .container {
-    background-color: red;
-  }
-
-.service-list {
+.impact-list{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-gap: 40px;
-  margin-top: 50px;
-  
+  grid-gap: 0px;
 }
-.service {
- border-radius: 10px;
- position:relative;
- overflow: hidden;
-}
-.service img {
-  width: 100%;
-  width: 170%;
-  border-radius: 10px;
-  display: block;
-
-}
-
-.services div {
-  padding: 40px;
-  font-size: 10px;
+.impact-list div{
+  background-color: ash;
+  padding: 0px 0px 0 35px;
+  font-size: 20px;
   font-weight: 300;
-  border-radius: 10px;
 }
-
-.services div i{
-  font-size: 50px;
-  margin-bottom: 30px;
+.impact-list div i{
+  font-size: 20px;
+  margin-bottom: 20px;
   transition: background 0.5s, transform 0.5s;
 }
-.sub-title h2{
-font-size: 30px;
-font-weight: 500;
-margin-bottom: 15px;
-color: red;
+.impact-list div h2{
+font-size: 20px;
+font-weight: bold;
+margin-bottom: 10px;
+text-align: center;
 }
-.services div a{
+.impact-list div a{
   text-decoration: none;
   color: #fff;
   font-size: 12px;
-  margin-top: 20px;
+  margin-top: 10px;
   display: inline-block;
 }
-.services-list div:hover{
-  background: #ff004f;
-  transform: translateY(-10px);
-}
   
+/*********Our Services********/
+#services {
+}
+.services-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 15px;
+}
+.services {
+  height: 315px;
+  position: relative;
+  overflow: hidden;
+  justify-content: center;
+  cursor: pointer;
+ 
+}
+.services img {
+  width: 300px;
+  height: 350px;
+  opacity: 0.9;
+  position: relative;
+  box-shadow:
+  inset 2px 2px 3px rgba(255, 255, 255, 0.6),
+  inset -2px -2px 3px rgba(0, 0, 2220, 0.6);
+}
+
+.across_text {
+  width:300px;
+  bottom: 0;
+  background: rgb(39, 37, 36, 0.6);
+  position: absolute;
+  text-align: center;
+  color: white;
+  
+  padding: 30px 0;
+}
+/***container for services***/
+.container {
+  background-color: crimson;
+  padding: 10px 50px;
+  height: 800px;
+  }
+
+
 /* Current/active navbar link */
 .active {
   background-color: yellow;
