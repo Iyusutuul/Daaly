@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en-">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Visitation Portal-Reg</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+    <body>
+          <div id= "Logo" style="position: absolute; width: 0 px; top: 0px; left: 0px;"></div>
+            <div class="content">
+      <div class="image-section">
+        <form action="file:///C:/xampp/htdocs/UnifiedPayments/login.html" method="get">
+    <div class="banner">
+          <img src="payattitude logo1" alt="spar logo design" style="float:left">
+        </div>
+        </div>
+            <div class="text-section">
+            <br>
+            <p style= "color:black; margin-left: 275px; font-family:Georgia, 'Times New Roman', Times, serif;">Create a Visit</p>
+             <br>         
+             <div class="inputs-section margin-right:20px">
+            <div class="inputs">
+          <div>
+        <div class="one-half">
+      <label for="first-name"><b>Merchant Name</b></label<br>
+       <input type="text" id="first-name"/>
+          </div>
+                <div class="one-half last">
+                  <label for="last-name"><b>Merchant Location
+                    
+                  </b></label<br>
+                  <input type="text" class="focus" id="last-name" name="last-name"/>
+                </div>
+              </div>
+              <div>
+                <div>
+                  <label for="email"><B>Terminal Type</B></label<br>
+                  <input type="email" id="email" name="email"/>
+                </div>
+                <div>
+                  <label for="phone-number"><b>Terminal Identity</b></label<br>
+                  <input type="tel" id="phone-number" name="phone-number"/>
+                </div>
+              </div>
+              <div>
+                <div>
+                  <label for="confirm-password"><b>PDO Location</b></label<br>
+                  <input type="password" class="error" id="confirm-password" name="confirm-password" required/>
+                </div>
+                <section class="section">
+                  <div vlass="container">
+                      <br>
+                      <label for="image">Upload Printout:</label>
+                      <input type="file" id="image" name="image" accept="image/png, image/jpeg, image/jpg">
+                   </div>
+                  </section>
+                  <script>
+                      (async function () {
+                        const {url, sasKey} = (await fetch("/api/credentials")).json();
+                        document.querySelector('#name').textContent = `SAS Key: ${sasKey}` +
+                         "\n" + `URL: ${url}`;
+                        function uploadFile() {
+                            const file = document.getElementById('image').files[0];
+                            blobUpLoad(file, url, 'image, sasKey');
+                        };
+                        const fileInput = document.getElementById('image');
+                        fileInput.addEventListener("change"), uploadFile);
+                        }())
+                  </script>
+                </section>
+              </section>
+              </div>
+            </div>
+          </div>
+          <button type="submit" id="create-account">Submit</button>
+        </form>
+        <p style="margin-left:270px" class="log-in">Already have an account? <a href="scoot_login.html">Log In</a></p>
+      </div>
+    </div>
+  </body>
+</html>
